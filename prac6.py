@@ -1,10 +1,13 @@
-t=int(input("enter range for fibbonaci"))
+t=int(input("enter range for fibbonaci: "))
 
 def fibbo(t):
-    if(t<=0):
-        return 1
+    if(t<=1):
+        return t
     else:
-        return fibbo(t-1)+fibbo(t-2)
-    
-for i in range(1,t+1):
+        return (fibbo(t-1)+fibbo(t-2))
+
+if (t<0):
+    print("Enter Positive number! ")
+else:
+    for i in range(t):
     print(str(fibbo(i)))
